@@ -31,7 +31,6 @@ lateinit var  cakeImageView: ImageView
         findViewById<Button>(R.id.revealButton).setOnClickListener{
              CoroutineScope(Job() + Dispatchers.Default).launch {
                 repeat(100) {
-                    handler.sendEmptyMessage(it)
                     delay(40)
                     cakeImageView.alpha = it / 100f
 
